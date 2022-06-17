@@ -9,14 +9,18 @@ button.style.display = 'none';
 // check when keys are pushed
 question.addEventListener('keyup', function() {
     if(question.value) {
-        button.style.display = 'block';
+        button.style.display = 'block';  // show button
     } else {
-        button.style.display = 'none';
+        button.style.display = 'none';  // hide button
     }
 })
 
 button.addEventListener('click', function() {  // check when button is clicked
+    // change image
     ask();
+
+    // hide button until question is changed
+    button.style.display = 'none';
 })
 
 function ask() {
