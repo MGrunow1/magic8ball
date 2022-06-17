@@ -1,10 +1,13 @@
 
 const button = document.querySelector('button');  // get the button
-
-questionInput.addEventListener('input', function() {  // check when something is input
-    p.innerHTML = '';  // clear any previous answer
-})
+const img = document.querySelector('img'); // get the image
 
 button.addEventListener('click', function() {  // check when button is clicked
-    p.innerHTML = 'Maybe';  // answer
+    ask();
 })
+
+function ask() {
+    const randomValue = Math.ceil(Math.random()*20);
+    const imageName = './images/magic8ball_' + randomValue + '.png';
+    img.src = imageName;
+}
