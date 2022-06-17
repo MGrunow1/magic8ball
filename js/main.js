@@ -1,10 +1,26 @@
-
+// initial putting elements into variables
 const button = document.querySelector('button');  // get the button
+const img = document.querySelector('img'); // get the image
+const question = document.getElementById('question'); // get the input question field
 
-questionInput.addEventListener('input', function() {  // check when something is input
-    p.innerHTML = '';  // clear any previous answer
+// start with Ask button hidden
+button.style.display = 'none';
+
+// check when keys are pushed
+question.addEventListener('keyup', function() {
+    if(question.value) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
 })
 
 button.addEventListener('click', function() {  // check when button is clicked
-    p.innerHTML = 'Maybe';  // answer
+    ask();
 })
+
+function ask() {
+    const randomValue = Math.ceil(Math.random()*20);
+    const imageName = './images/magic8ball_' + randomValue + '.png';
+    img.src = imageName;
+}
