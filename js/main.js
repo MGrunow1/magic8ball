@@ -28,6 +28,17 @@ function ask() {
     const answerList = ['', 'It is certain', 'It is decidedly so', 'Without a doubt', 'Yes, definitely', 'You may rely on it', 'As I see it, yes', 'Most likely', 'Outlook good', 'Yes', 'Signs point to yes', 'Reply hazy try again', 'Ask again later', 'Better not tell you now', 'Cannot predict now','Concentrate and ask me again', "Don't count on it", 'My reply is no', 'My sources say no', 'Outlook not so good', 'Very doubtful']
     const randomValue = Math.ceil(Math.random()*20);
     const imageName = './images/magic8ball_' + randomValue + '.png';
-    img.src = imageName;
-    img.alt = answerList[randomValue];
+    const overlay = document.querySelector('.overlay');
+
+    // show animation overlay, and set background image
+   overlay.style.opacity = 1;
+   img.src = './images/magic8ball_start.png';
+   img.alt = 'magic changing';
+
+    // pause for 1 second before changing
+    setTimeout(() => {
+        overlay.style.opacity = 0;
+        img.src = imageName;
+        img.alt = answerList[randomValue];
+        }, 1000);
 }
