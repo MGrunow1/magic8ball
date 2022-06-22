@@ -33,6 +33,17 @@ label {
     width: min(100%, 70vh);
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
 .text-center {
     text-align: center;
 }
@@ -41,6 +52,13 @@ label {
     margin-top: 9px;
     margin-bottom: 10px;
 }
+
+/* set position for answers box, to allow overlay */
+#answers {
+    position: relative;
+    width: min(100%, 70vh);
+}
+
 
 /* limit sizes when screen is wide */
 @media screen and (min-width: 500px) {
