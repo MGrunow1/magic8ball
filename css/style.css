@@ -31,10 +31,6 @@ label {
     margin-right: auto;
 }
 
-.bottom-5 {
-    margin-bottom: 5px;
-}
-
 .eight-ball {
     width: min(100%, 70vh);
 }
