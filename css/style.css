@@ -25,12 +25,24 @@ label {
     margin-right: auto;
 }
 
+.blue-border {
+    border: 2px solid rgb(0, 0, 250);
+    border-radius: 0.5em;
+    padding: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .bottom-5 {
     margin-bottom: 5px;
 }
 
 .eight-ball {
     width: min(100%, 70vh);
+}
+
+.fit-width {
+    width: max-content;
 }
 
 .overlay {
@@ -49,8 +61,8 @@ label {
 }
 
 .vert-spacing {
-    margin-top: 9px;
-    margin-bottom: 10px;
+    margin-top: 7px;
+    margin-bottom: 8px;
 }
 
 /* set position for answers box, to allow overlay */
