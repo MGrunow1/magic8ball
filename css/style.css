@@ -1,11 +1,16 @@
+/* import from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=New+Rocker&display=swap');
+
 input {
     padding: 5px;
     font-size: 16px;
     width: 90%;
+    font-family: Alatsi, sans-serif;
 }
 
 label {
     text-align: center;
+    font-family: Alatsi, sans-serif;
     font-size: 18px;
     display: block;
 }
@@ -16,6 +21,7 @@ label {
     border-radius: 20%;
     background-color: black;
     color: white;
+    font-family: Alatsi, sans-serif;
     font-size: 16px;
 }
 
@@ -31,6 +37,12 @@ label {
 
 .eight-ball {
     width: min(100%, 70vh);
+}
+
+.magic-heading {
+    font-family: 'New Rocker', cursive;
+    font-size: 40px;
+    margin: 0px;
 }
 
 .overlay {
