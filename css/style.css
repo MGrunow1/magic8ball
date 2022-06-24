@@ -35,6 +35,14 @@ label {
     width: min(100%, 70vh);
 }
 
+.fadein {
+    animation: fadein 4s;
+}
+
+.fadeout {
+    animation: fadeout 4s;
+}
+
 .magic-heading {
     font-family: 'New Rocker', cursive;
     font-size: 35px;
@@ -65,6 +73,18 @@ label {
 #answers {
     position: relative;
     width: min(100%, 70vh);
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    70% {opacity: 1;}
+    100% {opacity: 1}
+}
+
+@keyframes fadeout {
+    0% {opacity: 1;}
+    30% {opacity: 1;}
+    100% {opacity: 0}
 }
 
 /* adjust font sizes for larger screens */
