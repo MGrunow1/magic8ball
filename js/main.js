@@ -31,23 +31,19 @@ function ask() {
     // set up images for fade transition
     const imageName = './images/magic8ball_' + randomValue + '.png';
     const overlay = document.querySelector('.overlay');
-    const fadeDuration = {
-        duration: 2000,
-        iterations: 1,
-      }
 
     // show animation overlay, and set background image
-   const fadeIn = [{'opacity' : 0}, {'opacity' : 1}];
-   img.alt = 'magic changing';
-   overlay.animate(fadeIn, fadeDuration);
-   overlay.style.opacity = 1;
+    overlay.classList.remove('fadeout');
+    img.alt = 'magic changing';
+    overlay.classList.add('fadein');
+    overlay.style.opacity = 1;
 
     // pause to let fade-in finish for a bit, then fade to answer
     setTimeout(() => {
-        const fadeOut = [{'opacity' : 1}, {'opacity' : 0}];
         img.src = imageName;
         img.alt = answerList[randomValue];
-        overlay.animate(fadeOut, fadeDuration);
+        overlay.classList.remove('fadein');
+        overlay.classList.add('fadeout');
         overlay.style.opacity = 0;
-        }, 2500);
+        }, 4500);
 }
