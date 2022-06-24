@@ -36,11 +36,11 @@ label {
 }
 
 .fadein {
-    animation: fadein 4s;
+    animation: fadein 4.2s;
 }
 
 .fadeout {
-    animation: fadeout 4s;
+    animation: fadeout 4.2s;
 }
 
 .magic-heading {
@@ -77,13 +77,13 @@ label {
 
 @keyframes fadein {
     0% {opacity: 0;}
-    70% {opacity: 1;}
+    90% {opacity: 1;}
     100% {opacity: 1}
 }
 
 @keyframes fadeout {
     0% {opacity: 1;}
-    30% {opacity: 1;}
+    10% {opacity: 1;}
     100% {opacity: 0}
 }
 
